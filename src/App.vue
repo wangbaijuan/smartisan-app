@@ -62,9 +62,7 @@ html,body {
   font-size: 10px !important;
 }
 #app {
-  padding: 50px 0 55px;
   background-color: #f5f5f5;
-
 }
 #app .mint-tabbar {
     background: #fff;
