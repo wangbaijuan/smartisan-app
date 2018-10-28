@@ -9,7 +9,9 @@
                 <div class="mui-input-row">
                     <input v-model="user.pwd" type="password" class="mui-input-password" placeholder="密码">
                 </div>
-                <button class="btn mui-btn mui-btn-primary" >登陆</button> 
+                <div class="mui-button-row">
+                    <button class="btn mui-btn mui-btn-primary" >登陆</button> 
+                </div>
             </form>
         </div>
         
@@ -55,11 +57,23 @@ export default {
         margin-top: 50px;
         padding: 10px;
     }
+    .mui-input-row {
+        height: 50px;
+    }
+    .mui-input-row input {
+        font-size: 2rem;
+        height: 50px;
+        line-height: 50px
+    }
+    .mui-button-row {
+        height: 60px;
+        padding: 2px 10px;
+    }
     .btn {
         width: 100%;
-        height: 60px;
+        height: 50px;
         border-radius: 0.3;
-        line-height: 60px;
+        line-height: 50px;
         font-size: 1.5rem;
         padding: 0;
     }
