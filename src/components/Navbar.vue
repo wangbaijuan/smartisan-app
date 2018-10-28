@@ -1,12 +1,13 @@
 <template>
         <!-- <h1 class="mui-title"><img src="" alt=""></h1> -->
-    <header id="header" class="mui-bar mui-bar-nav">
-        <a class="mui-icon mui-icon-bars mui-pull-left" v-if=" title === undefined || title ==='分类' " ></a>
-       <h1 class="mui-title"> <div class="logo" v-if="title === undefined"></div> {{title}}  </h1>
-        <a class="mui-icon mui-icon-search mui-pull-right" v-if=" title === undefined || title ==='分类' "></a>
-        <a class="mui-btn mui-btn-outlined mui-pull-right" v-if=" title === '购物车' " v-text="cartOperation" @click="cartClick"></a>
-        <router-link class="mui-btn mui-btn-outlined mui-pull-left" v-if=" title === '坚果 Pro 2S' " to="/category" > 返回 </router-link >
-    </header>
+        <header id="header" class="mui-bar mui-bar-nav">
+            <a class="mui-icon mui-icon-bars mui-pull-left" v-if=" title === undefined || title ==='分类' " ></a>
+            <h1 class="mui-title"> <div class="logo" v-if="title === undefined"></div> {{title}}  </h1>
+                <a class="mui-icon mui-icon-search mui-pull-right" v-if=" title === undefined || title ==='分类' "></a>
+                <a class="mui-btn mui-btn-outlined mui-pull-right" v-if=" title === '购物车' " v-text="cartOperation" @click="cartClick"></a>
+                <router-link class="mui-btn mui-btn-outlined mui-pull-left" v-if=" title === '坚果 Pro 2S' " to="/category" > 返回 </router-link >
+        </header>
+  
 </template>
 
 <script>
@@ -35,6 +36,10 @@
 #header {
     background-color: #333;
     height: 50px;
+}
+#header::after{
+    content: "sdfs";
+    margin-top: 50px
 }
 #header .mui-title {
     color: #eee;

@@ -32,6 +32,9 @@ import Navbar from '@/components/Navbar.vue'
   }
 </script>
 <style>
+    .container{
+      margin-top: 50px;
+    }
     .category .title {
       height: 40px;
       padding-left: 12px;

@@ -64,6 +64,7 @@ import Footer from '@/components/Footer.vue'
     }
     .index-container .index-content {
         flex: 1;
+        margin-top: 50px;
     }
     .index-content .home-box {
         background-color: #fff;
