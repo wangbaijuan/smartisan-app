@@ -11,7 +11,7 @@
             分类
         </mt-tab-item>
         <mt-tab-item id="cart" >
-          <mt-badge type="error">10</mt-badge>
+          <mt-badge type="error">{{this.$store.state.count}}</mt-badge>
             <img slot="icon" v-if=" selected === 'cart' "  src='../assets/images/index/tabbar-sub3-active.png'>
             <img slot="icon" v-else  src='../assets/images/index/tabbar-sub3.png'> 
             购物车

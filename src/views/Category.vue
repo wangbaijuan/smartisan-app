@@ -5,15 +5,15 @@
       <p class="title">手机</p>
       <div class="category-banner"><img src="../assets/images/res/category-banner.png" alt=""></div>
       <ul class="mui-table-view">
-        <li class="mui-table-view-cell">
-            <router-link to="/detail" class="mui-navigate-right">
+        <li class="mui-table-view-cell" v-for="item in list" :key="item.id">
+            <router-link :to="'/detail/'+item.id" class="mui-navigate-right">
                   <img class="mui-media-object mui-pull-left" src="../assets/images/res/category-item.png">
                   <div class="mui-media-body">
-                      坚果Pro2S
+                      {{item.title}}
                   </div>
             </router-link>
         </li>
-    </ul>
+      </ul>
     </div>
     <Footer/>
   </div>
@@ -26,7 +26,17 @@ import Navbar from '@/components/Navbar.vue'
     name:"category",
       data(){
           return {
+            list: []
           }
+      },
+      created() {
+        this.list = [
+              {id: 1, title: "坚果 Pro 2S"},
+              {id: 2, title: "坚果 R1"},
+              {id: 3, title: "坚果 3"},
+              {id: 4, title: "坚果 Pro 2 特别版"},
+              {id: 5, title: "坚果 Pro 2"},
+            ]
       },
       components: {Navbar,Footer}
   }

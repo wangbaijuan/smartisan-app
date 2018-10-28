@@ -39,7 +39,7 @@ export default new Router({
       component: ()=> import('./views/Profile.vue')
     },
     {
-      path: '/detail',
+      path: '/detail/:id',
       component: ()=> import('./views/ProductDetail.vue')
     },
     {

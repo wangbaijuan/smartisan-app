@@ -16,8 +16,8 @@ export default new Vuex.Store({
         state.count++
       }
     },
-    login (state) {
-      
+    login (state, uname) {
+      state.profile = uname;
     }
   }
 })

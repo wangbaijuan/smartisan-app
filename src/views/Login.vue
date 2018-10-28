@@ -45,6 +45,7 @@ export default {
                 iconClass: 'icon icon-success',
                 duration: 500
              });
+             this.$store.commit('login', this.user.phone);
             this.$router.push("/cart")
 
         }

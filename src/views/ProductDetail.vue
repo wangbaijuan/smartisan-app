@@ -7,10 +7,10 @@
             </div>
             <section class="box item-info">
                 <div class="item-title">商品信息</div>
-                <div class="title-content">
-                    <h5>坚果 Pro 2S</h5>
+                <div class="title-content" v-cloak>
+                    <h5> {{detail.title}} </h5>
                     <p>双系统，无限屏，骁龙 ™ 710 处理器 · 前置 1600 万像素摄像头 · 6.01 英寸全高清全面屏 · AI 通话降噪 · 人脸解锁 + 指纹解锁 </p>
-                    <p class="price">￥ 1998.00</p>
+                    <p class="price">￥ {{ Number.parseFloat(detail.price).toFixed(2)}}</p>
                 </div>
             </section>
             <section class="box item-specs">
@@ -41,16 +41,34 @@ import Navbar from '@/components/Navbar.vue';
 import { Toast } from 'mint-ui';
     export default {
         data(){
-            return {}
+            return {
+                detail: {}
+            }
         },
       components: {Navbar},
+      created(){
+          var data = [
+              {id: 1, title: "坚果 Pro 2S", price: "1998"},
+              {id: 2, title: "坚果 R1", price: "2999"},
+              {id: 3, title: "坚果 3", price: "1999"},
+              {id: 4, title: "坚果 Pro 2 特别版", price: "1899"},
+              {id: 5, title: "坚果 Pro 2", price: "1799"},
+            ]
+        var id = this.$route.params.id;
+        var res = data.filter( function(item) {
+            if(item.id == id){
+                return true;
+            }
+        } );
+        this.detail = res[0];
+        console.log(this.detail);
+      },
       methods: {
           toCart(){
               this.$router.push('/cart');
           },
           addCart(){
               this.$store.commit('increment');
-              console.log(this.$store.state.count);
               Toast({
                     message: '加入购物车成功',
                     position: 'bottom',
@@ -162,18 +180,18 @@ import { Toast } from 'mint-ui';
         vertical-align: middle;
     }
     .cart-png .mint-badge {
-    color: #fff;
-    text-align: center;
-    display: inline-block;
-    position: absolute;
-    top: 6px;
-    left: 26px;
-    padding: 2px;
-    border-radius: 50%;
-    font-size: 10px;
-    width: 20px;
-    height: 20px;
-    line-height: 18px;
-    text-align: center;
-}
+        color: #fff;
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: 26px;
+        padding: 2px;
+        border-radius: 50%;
+        font-size: 10px;
+        width: 20px;
+        height: 20px;
+        line-height: 18px;
+        text-align: center;
+    }
 </style>

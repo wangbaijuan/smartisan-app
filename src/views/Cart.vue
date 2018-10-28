@@ -6,7 +6,7 @@
                 <div class="img-container"></div>
                 <h3>购物车暂无商品</h3>
                 <p>添加到购物车的商品将会显示在这里</p>
-                <router-link to="/login" type="button" class="buy-btn mui-btn mui-btn-primary">登陆</router-link>
+                <router-link v-if="!this.$store.state.profile" to="/login" type="button" class="buy-btn mui-btn mui-btn-primary">登陆</router-link>
                 <router-link to="/index" type="button" class="buy-btn mui-btn">现在选购</router-link> 
                 <!-- <button type="button" class="buy-btn mui-btn btn-bg">现在选购</button> -->
             </div>

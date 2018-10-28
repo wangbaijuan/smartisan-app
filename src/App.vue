@@ -78,10 +78,15 @@ html,body {
     text-align: center;
     display: inline-block;
     position: absolute;
-    top: -32px;
-    right: 26px;
+    top: -36px;
+    right: 23px;
     padding: 2px;
-    font-size: .3em;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
 }
 #app .mint-tabbar > .mint-tab-item.is-selected {
   background: linear-gradient(0deg,hsla(0,0%,100%,.05),rgba(0,0,0,.05));
