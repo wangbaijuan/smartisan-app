@@ -1,5 +1,5 @@
 <template>
-    <mt-tabbar v-model="selected" fixed @click.native="tabClick(selected)">   
+    <mt-tabbar v-model="selected" fixed >   
         <mt-tab-item id="index">
             <img slot="icon" v-if=" selected === 'index' "  src='../assets/images/index/tabbar-sub1-active.png'>
             <img slot="icon" v-else  src='../assets/images/index/tabbar-sub1.png'> 
@@ -33,12 +33,15 @@ export default {
     },
     methods: {
       tabClick(id){
+        console.log('tabClick', this.selected)
         this.$router.push('/'+id);
       }
     },
     watch: {
       selected: function(val, oldVal){
-        // console.log(val, oldVal);
+        // tabClick(val);
+        console.log(val)
+        this.$router.push('/'+val);
       }
     }
 }
