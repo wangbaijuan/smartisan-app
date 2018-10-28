@@ -6,8 +6,9 @@
                 <div class="img-container"></div>
                 <h3>购物车暂无商品</h3>
                 <p>添加到购物车的商品将会显示在这里</p>
-                <button type="button" class="buy-btn mui-btn mui-btn-primary">登陆</button>
-                <button type="button" class="buy-btn mui-btn">现在选购</button>
+                <router-link to="/login" type="button" class="buy-btn mui-btn mui-btn-primary">登陆</router-link>
+                <router-link to="/index" type="button" class="buy-btn mui-btn">现在选购</router-link> 
+                <!-- <button type="button" class="buy-btn mui-btn btn-bg">现在选购</button> -->
             </div>
         </div>
         <Footer/>
@@ -66,5 +67,8 @@ import Footer from '@/components/Footer.vue'
         line-height: 40px;
         padding: 0;
         margin-right: 2px;
+    }
+    .btn-bg {
+        width: 100%;
     }
 </style>

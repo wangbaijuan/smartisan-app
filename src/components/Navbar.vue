@@ -37,10 +37,6 @@
     background-color: #333;
     height: 50px;
 }
-#header::after{
-    content: "sdfs";
-    margin-top: 50px
-}
 #header .mui-title {
     color: #eee;
 }
